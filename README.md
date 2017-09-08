@@ -23,6 +23,9 @@ Mul64-4    6.56µs ± 2%  6.91µs ± 6%   +5.45%  (p=0.002 n=10+10)
 Div64-4    53.2µs ± 3%  44.6µs ± 0%  -16.06%  (p=0.000 n=10+9)
 ```
 
+> Note: it is strange that Sub/Add/Mul time differs as their
+> machine code is exactly the same on amd64 (see "Machine code comparison").
+
 ```
 go test -bench=.
 BenchmarkLogicalBuiltin-4   	  500000	      3087 ns/op
