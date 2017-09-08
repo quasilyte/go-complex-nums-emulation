@@ -15,6 +15,7 @@ Tests are included.
 # old is builtin complex64
 # new is user-defined Complex64
 
+name       old time/op  new time/op  delta
 Logical-4  2.89µs ± 1%  2.70µs ± 3%   -6.47%  (p=0.000 n=9+10)
 Add64-4    1.50µs ± 0%  1.60µs ± 6%   +6.74%  (p=0.000 n=8+10)
 Sub64-4    1.51µs ± 2%  1.70µs ± 0%  +12.48%  (p=0.000 n=10+8)
