@@ -3,11 +3,11 @@
 See [proposal: remove complex numbers](https://github.com/golang/go/issues/19921).
 
 This repository:
-1. Implements (quite naively) most `complex64`/`complex128` operations with user-defined
-   types `Complex64` and `Complex128`.
-2. Measures performance of `complex64` VS `Complex64` and `complex128` VS `Complex128`. 
+1. Implements most `complex64` operations with user-defined type `Complex64`.
+2. Measures performance of `complex64` VS `Complex64`.
+3. Provides `amd64` machine code output for both builtin and `Complex64` operations.
 
-Tests are included.
+Results and conclusions may be extrapolated to `complex128`.
 
 ## TL;DR
 
