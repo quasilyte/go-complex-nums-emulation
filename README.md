@@ -44,7 +44,7 @@ Each result has "benchmark-results/$arch/$machine_id/"
 path and contains:
 
 1. `lscpu.txt`, the result of `lscpu` invocation result;
-2. `builtin.out` & `lib.out - results of the benchmark runs;
+2. `builtin.out` & `lib.out` - results of the benchmark runs;
 3. `uname.txt`, optional `uname -a` invocation result;
 4. `benchstat.txt` result of `benchstat builtin.out lib.out`;
 
