@@ -53,3 +53,10 @@ path and contains:
 aggregate benchmark statistics.
 
 See [run-benchmarks](run-benchmarks) bash script for detailed instruction.
+
+## Machine code comparison
+
+Most code looks the same, but some code compiled
+to different instruction sequences.
+
+Look inside [disasm.go](disasm.go) to inspect objdump output.
