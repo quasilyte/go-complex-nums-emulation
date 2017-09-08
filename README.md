@@ -9,6 +9,8 @@ This repository:
 
 Results and conclusions may be extrapolated to `complex128`.
 
+**This is performance comparison of the potential implementation, not a library**.
+
 ## TL;DR
 
 ```
