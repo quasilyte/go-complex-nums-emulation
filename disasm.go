@@ -53,6 +53,36 @@ func add64builtin(c1, c2 complex64) complex64 { return c1 + c2 }
 // 0x2210  RET
 func add64(c1, c2 Complex64) Complex64 { return c1.Add(c2) }
 
+// 0x2416  REP MOVSS 0x10(SP), X0
+// 0x241c  REP MOVSS 0x8(SP), X1
+// 0x2422  REP ADDSS X1, X0
+// 0x2426  REP MOVSS 0x18(SP), X1
+// 0x242c  REP ADDSS X1, X0
+// 0x2430  REP MOVSS X0, 0x20(SP)
+// 0x2436  REP MOVSS 0x14(SP), X0
+// 0x243c  REP MOVSS 0xc(SP), X1
+// 0x2442  REP ADDSS X1, X0
+// 0x2446  REP MOVSS 0x1c(SP), X1
+// 0x244c  REP ADDSS X1, X0
+// 0x2450  REP MOVSS X0, 0x24(SP)
+// 0x2456  RET
+func chainedAdd64builtin(c1, c2, c3 complex64) complex64 { return c1 + c2 + c3 }
+
+// 0x2460  REP MOVSS 0x10(SP), X0
+// 0x2466  REP MOVSS 0x8(SP), X1
+// 0x246c  REP ADDSS X1, X0
+// 0x2470  REP MOVSS 0x18(SP), X1
+// 0x2476  REP ADDSS X1, X0
+// 0x247a  REP MOVSS X0, 0x20(SP)
+// 0x2480  REP MOVSS 0xc(SP), X0
+// 0x2486  REP MOVSS 0x14(SP), X1
+// 0x248c  REP ADDSS X1, X0
+// 0x2490  REP MOVSS 0x1c(SP), X1
+// 0x2496  REP ADDSS X1, X0
+// 0x249a  REP MOVSS X0, 0x24(SP)
+// 0x24a0  RET
+func chainedAdd64(c1, c2, c3 Complex64) Complex64 { return c1.Add(c2).Add(c3) }
+
 // 0x221a  REP MOVSS 0x8(SP), X0
 // 0x2220  REP MOVSS 0x10(SP), X1
 // 0x2226  REP SUBSS X1, X0
