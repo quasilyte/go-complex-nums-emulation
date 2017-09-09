@@ -4,15 +4,20 @@
 echo 'collecting benchmark stats...'
 for i in {1..10}; do
     go test -bench=Builtin >> builtin.out &&
-        echo "benchmark builtin: completed ${i}/5"
+        echo "benchmark builtin: completed ${i}/10"
 done
 for i in {1..10}; do
     go test -bench=[^n]$ >> lib.out &&
-        echo "benchmark lib: completed ${i}/5"
+        echo "benchmark lib: completed ${i}/10"
 done
 
 # 2 - remove "Builtin" suffix from test results
 sed -i 's/Builtin//g' builtin.out
 
-# 3 - run benchstat
+# 3 - remove "ok $path $time" string from results
+
+sed -i '/^ok /d' builtin.out
+sed -i '/^ok /d' lib.out
+
+# 4 - run benchstat
 benchstat builtin.out lib.out

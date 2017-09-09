@@ -4,67 +4,57 @@ BenchmarkSub64-4     	 1000000	      1499 ns/op
 BenchmarkMul64-4     	  200000	      6471 ns/op
 BenchmarkDiv64-4     	   30000	     52595 ns/op
 PASS
-ok  	_/home/quasilyte/CODE/GIT/go-complex-nums-emulation	7.979s
 BenchmarkLogical-4   	  500000	      2997 ns/op
 BenchmarkAdd64-4     	 1000000	      1504 ns/op
 BenchmarkSub64-4     	 1000000	      1499 ns/op
 BenchmarkMul64-4     	  200000	      6610 ns/op
 BenchmarkDiv64-4     	   30000	     54931 ns/op
 PASS
-ok  	_/home/quasilyte/CODE/GIT/go-complex-nums-emulation	8.145s
 BenchmarkLogical-4   	  500000	      2888 ns/op
 BenchmarkAdd64-4     	 1000000	      1500 ns/op
 BenchmarkSub64-4     	 1000000	      1499 ns/op
 BenchmarkMul64-4     	  200000	      6622 ns/op
 BenchmarkDiv64-4     	   30000	     54615 ns/op
 PASS
-ok  	_/home/quasilyte/CODE/GIT/go-complex-nums-emulation	8.102s
 BenchmarkLogical-4   	  500000	      2912 ns/op
 BenchmarkAdd64-4     	 1000000	      1504 ns/op
 BenchmarkSub64-4     	 1000000	      1537 ns/op
 BenchmarkMul64-4     	  200000	      6481 ns/op
 BenchmarkDiv64-4     	   30000	     52587 ns/op
 PASS
-ok  	_/home/quasilyte/CODE/GIT/go-complex-nums-emulation	8.043s
 BenchmarkLogical-4   	  500000	      2882 ns/op
 BenchmarkAdd64-4     	 1000000	      1499 ns/op
 BenchmarkSub64-4     	 1000000	      1499 ns/op
 BenchmarkMul64-4     	  200000	      6473 ns/op
 BenchmarkDiv64-4     	   30000	     52576 ns/op
 PASS
-ok  	_/home/quasilyte/CODE/GIT/go-complex-nums-emulation	7.982s
 BenchmarkLogical-4   	  500000	      2901 ns/op
 BenchmarkAdd64-4     	 1000000	      1497 ns/op
 BenchmarkSub64-4     	 1000000	      1499 ns/op
 BenchmarkMul64-4     	  200000	      6718 ns/op
 BenchmarkDiv64-4     	   30000	     52774 ns/op
 PASS
-ok  	_/home/quasilyte/CODE/GIT/go-complex-nums-emulation	8.067s
 BenchmarkLogical-4   	  500000	      2887 ns/op
 BenchmarkAdd64-4     	 1000000	      1557 ns/op
 BenchmarkSub64-4     	 1000000	      1537 ns/op
 BenchmarkMul64-4     	  200000	      6466 ns/op
 BenchmarkDiv64-4     	   30000	     52595 ns/op
 PASS
-ok  	_/home/quasilyte/CODE/GIT/go-complex-nums-emulation	8.080s
 BenchmarkLogical-4   	  500000	      2876 ns/op
 BenchmarkAdd64-4     	 1000000	      1498 ns/op
 BenchmarkSub64-4     	 1000000	      1499 ns/op
 BenchmarkMul64-4     	  200000	      6718 ns/op
 BenchmarkDiv64-4     	   30000	     52584 ns/op
 PASS
-ok  	_/home/quasilyte/CODE/GIT/go-complex-nums-emulation	8.033s
 BenchmarkLogical-4   	  500000	      2883 ns/op
 BenchmarkAdd64-4     	 1000000	      1579 ns/op
 BenchmarkSub64-4     	 1000000	      1509 ns/op
 BenchmarkMul64-4     	  200000	      6474 ns/op
 BenchmarkDiv64-4     	   30000	     53654 ns/op
 PASS
-ok  	_/home/quasilyte/CODE/GIT/go-complex-nums-emulation	8.126s
 BenchmarkLogical-4   	  500000	      2901 ns/op
 BenchmarkAdd64-4     	 1000000	      1497 ns/op
 BenchmarkSub64-4     	 1000000	      1529 ns/op
 BenchmarkMul64-4     	  200000	      6534 ns/op
 BenchmarkDiv64-4     	   30000	     52618 ns/op
 PASS
-ok  	_/home/quasilyte/CODE/GIT/go-complex-nums-emulation	8.062s
