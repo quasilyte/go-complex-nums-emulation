@@ -20,7 +20,7 @@ func (c Complex64) IsZero() bool {
 	return c.r == 0 && c.i == 0
 }
 
-// Eq is "=" operation.
+// Eq is "==" operation.
 func (c Complex64) Eq(x Complex64) bool {
 	return c.r == x.r && c.i == x.i
 }
