@@ -63,7 +63,7 @@ folder, which consist of:
 [Benchstat](https://godoc.org/golang.org/x/perf/cmd/benchstat) is required to
 aggregate benchmark statistics.
 
-See [run-benchmarks](run-benchmarks) bash script for detailed instruction.
+See [run-benchmarks](script/run-benchmarks) bash script for detailed instruction.
 
 ## Machine code comparison
 
