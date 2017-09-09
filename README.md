@@ -66,3 +66,16 @@ Most code looks the same, but some code compiled
 to different instruction sequences.
 
 Look inside [disasm.go](disasm.go) to inspect objdump output.
+
+## Edge cases / limitations
+
+### Constant semantics
+
+[Spec:complex_numbers](https://golang.org/ref/spec#Complex_numbers): `complex`, `imag` and `real`
+can be a constant value.
+
+>  If the operands of these functions are all constants, the return value is a constant.
+
+User-defined struct literal is never a constant.
+
+
