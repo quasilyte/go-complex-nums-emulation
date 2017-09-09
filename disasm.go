@@ -167,20 +167,20 @@ func mul64(c1, c2 Complex64) Complex64 { return c1.Mul(c2) }
 // 0x237b  RET
 func isZero64builtin(c complex64) bool { return c == 0 }
 
-// 0x2386  REP MOVSS 0x8(SP), X0
-// 0x238c  XORPS X1, X1
-// 0x238f  UCOMISS X1, X0
-// 0x2392  JNE 0x23ac
-// 0x2394  JP 0x23ac
-// 0x2396  REP MOVSS 0xc(SP), X0
-// 0x239c  UCOMISS X1, X0
-// 0x239f  SETE CL
-// 0x23a2  SETNP AL
-// 0x23a5  ANDL AX, CX
-// 0x23a7  MOVB CL, 0x10(SP)
-// 0x23ab  RET
-// 0x23ac  XORL CX, CX
-// 0x23ae  JMP 0x23a7
+// 0x25d6  REP MOVSS 0x8(SP), X0
+// 0x25dc  XORPS X1, X1
+// 0x25df  UCOMISS X1, X0
+// 0x25e2  JNE 0x25fc
+// 0x25e4  JP 0x25fc
+// 0x25e6  REP MOVSS 0xc(SP), X0
+// 0x25ec  UCOMISS X1, X0
+// 0x25ef  SETE CL
+// 0x25f2  SETNP AL
+// 0x25f5  ANDL AX, CX
+// 0x25f7  MOVB CL, 0x10(SP)
+// 0x25fb  RET
+// 0x25fc  XORL CX, CX
+// 0x25fe  JMP 0x25f7
 func isZero64(c Complex64) bool { return c.IsZero() }
 
 // 0x23ba  REP MOVSS 0x8(SP), X0
@@ -200,21 +200,21 @@ func isZero64(c Complex64) bool { return c.IsZero() }
 // 0x23ee  RET
 func eq64builtin(c1, c2 complex64) bool { return c1 == c2 }
 
-// 0x23f9  REP MOVSS 0x8(SP), X0
-// 0x23ff  REP MOVSS 0x10(SP), X1
-// 0x2405  UCOMISS X1, X0
-// 0x2408  JNE 0x2428
-// 0x240a  JP 0x2428
-// 0x240c  REP MOVSS 0xc(SP), X0
-// 0x2412  REP MOVSS 0x14(SP), X1
-// 0x2418  UCOMISS X1, X0
-// 0x241b  SETE CL
-// 0x241e  SETNP AL
-// 0x2421  ANDL AX, CX
-// 0x2423  MOVB CL, 0x18(SP)
-// 0x2427  RET
-// 0x2428  XORL CX, CX
-// 0x242a  JMP 0x2423
+// 0x2649  REP MOVSS 0x8(SP), X0
+// 0x264f  REP MOVSS 0x10(SP), X1
+// 0x2655  UCOMISS X1, X0
+// 0x2658  JNE 0x2678
+// 0x265a  JP 0x2678
+// 0x265c  REP MOVSS 0xc(SP), X0
+// 0x2662  REP MOVSS 0x14(SP), X1
+// 0x2668  UCOMISS X1, X0
+// 0x266b  SETE CL
+// 0x266e  SETNP AL
+// 0x2671  ANDL AX, CX
+// 0x2673  MOVB CL, 0x18(SP)
+// 0x2677  RET
+// 0x2678  XORL CX, CX
+// 0x267a  JMP 0x2673
 func eq64(c1, c2 Complex64) bool { return c1.Eq(c2) }
 
 // 0x2480  REP MOVSS 0x8(SP), X0
@@ -235,20 +235,20 @@ func eq64(c1, c2 Complex64) bool { return c1.Eq(c2) }
 // 0x24b7  RET
 func neq64builtin(c1, c2 complex64) bool { return c1 != c2 }
 
-// 0x24c2  REP MOVSS 0x8(SP), X0
-// 0x24c8  REP MOVSS 0x10(SP), X1
-// 0x24ce  UCOMISS X1, X0
-// 0x24d1  JNE 0x24d5
-// 0x24d3  JNP 0x24df
-// 0x24d5  MOVL $0x1, AX
-// 0x24da  MOVB AL, 0x18(SP)
-// 0x24de  RET
-// 0x24df  REP MOVSS 0xc(SP), X0
-// 0x24e5  REP MOVSS 0x14(SP), X1
-// 0x24eb  UCOMISS X1, X0
-// 0x24ee  SETNE CL
-// 0x24f1  SETP AL
-// 0x24f4  ORL AX, CX
-// 0x24f6  MOVL CX, AX
-// 0x24f8  JMP 0x24da
+// 0x26c8  REP MOVSS 0x8(SP), X0
+// 0x26ce  REP MOVSS 0x10(SP), X1
+// 0x26d4  UCOMISS X1, X0
+// 0x26d7  JNE 0x26db
+// 0x26d9  JNP 0x26e5
+// 0x26db  MOVL $0x1, AX
+// 0x26e0  MOVB AL, 0x18(SP)
+// 0x26e4  RET
+// 0x26e5  REP MOVSS 0xc(SP), X0
+// 0x26eb  REP MOVSS 0x14(SP), X1
+// 0x26f1  UCOMISS X1, X0
+// 0x26f4  SETNE CL
+// 0x26f7  SETP AL
+// 0x26fa  ORL AX, CX
+// 0x26fc  MOVL CX, AX
+// 0x26fe  JMP 0x26e0
 func neq64(c1, c2 Complex64) bool { return c1.Neq(c2) }

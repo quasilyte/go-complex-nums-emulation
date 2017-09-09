@@ -17,17 +17,17 @@ func (c Complex64) Imag() float32 { return c.i }
 
 // IsZero returns true if both c.Real() and c.Imag() return 0.
 func (c Complex64) IsZero() bool {
-	return c.r == 0 && c.i == 0
+	return c == Complex64{}
 }
 
 // Eq is "==" operation.
 func (c Complex64) Eq(x Complex64) bool {
-	return c.r == x.r && c.i == x.i
+	return c == x
 }
 
 // Neq is "!=" operation.
 func (c Complex64) Neq(x Complex64) bool {
-	return c.r != x.r || c.i != x.i
+	return c != x
 }
 
 // Add is "+" operation.
