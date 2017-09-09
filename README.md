@@ -18,11 +18,11 @@ Results and conclusions may be extrapolated to `complex128`.
 # new is user-defined Complex64
 
 name       old time/op  new time/op  delta
-Logical-4  2.89µs ± 1%  2.70µs ± 3%   -6.47%  (p=0.000 n=9+10)
-Add64-4    1.50µs ± 0%  1.60µs ± 6%   +6.74%  (p=0.000 n=8+10)
-Sub64-4    1.51µs ± 2%  1.70µs ± 0%  +12.48%  (p=0.000 n=10+8)
-Mul64-4    6.56µs ± 2%  6.91µs ± 6%   +5.45%  (p=0.002 n=10+10)
-Div64-4    53.2µs ± 3%  44.6µs ± 0%  -16.06%  (p=0.000 n=10+9)
+Logical-4  2.89µs ± 1%  2.77µs ± 8%    ~     (p=0.108 n=9+10)
+Add64-4    1.50µs ± 1%  1.51µs ± 1%    ~     (p=0.174 n=9+10)
+Sub64-4    1.50µs ± 1%  1.52µs ± 1%  +0.80%  (p=0.000 n=9+10)
+Mul64-4    6.50µs ± 2%  6.74µs ± 7%    ~     (p=0.101 n=10+10)
+Div64-4    52.6µs ± 0%  47.9µs ± 7%  -8.99%  (p=0.000 n=9+10)
 ```
 
 > Note: it is strange that Sub/Add/Mul time differs as their
@@ -30,28 +30,33 @@ Div64-4    53.2µs ± 3%  44.6µs ± 0%  -16.06%  (p=0.000 n=10+9)
 
 ```
 go test -bench=.
-BenchmarkLogicalBuiltin-4   	  500000	      3087 ns/op
-BenchmarkLogical-4          	  500000	      2698 ns/op
-BenchmarkAdd64Builtin-4     	 1000000	      1496 ns/op
-BenchmarkAdd64-4            	 1000000	      1501 ns/op
-BenchmarkSub64Builtin-4     	 1000000	      1495 ns/op
-BenchmarkSub64-4            	 1000000	      1511 ns/op
-BenchmarkMul64Builtin-4     	  200000	      6466 ns/op
-BenchmarkMul64-4            	  200000	      6451 ns/op
-BenchmarkDiv64Builtin-4     	   30000	     52530 ns/op
-BenchmarkDiv64-4            	   30000	     44477 ns/op
+BenchmarkLogicalBuiltin-4   	  500000	      2876 ns/op
+BenchmarkLogical-4          	  500000	      2711 ns/op
+BenchmarkAdd64Builtin-4     	 1000000	      1539 ns/op
+BenchmarkAdd64-4            	 1000000	      1516 ns/op
+BenchmarkSub64Builtin-4     	 1000000	      1511 ns/op
+BenchmarkSub64-4            	 1000000	      1568 ns/op
+BenchmarkMul64Builtin-4     	  200000	      6476 ns/op
+BenchmarkMul64-4            	  200000	      6456 ns/op
+BenchmarkDiv64Builtin-4     	   30000	     52589 ns/op
+BenchmarkDiv64-4            	   30000	     44854 ns/op
 ```
 
 ## Benchmark results.
 
 Results stored in "benchmark-results/".
-Each result has "benchmark-results/$arch/$machine_id/"
-path and contains:
+Structure is "benchmark-results/$arch/$machine_id/$version".
 
-1. `lscpu.txt`, the result of `lscpu` invocation result;
-2. `builtin.out` & `lib.out` - results of the benchmark runs;
-3. `uname.txt`, optional `uname -a` invocation result;
-4. `benchstat.txt` result of `benchstat builtin.out lib.out`;
+Each machine folder can contain some hardware/system info:
+
+- `lscpu.txt`, the result of `lscpu` invocation result
+- `uname.txt`, optional `uname -a` invocation result
+
+For each version that was tested on that machine, there is "v$number"
+folder, which consist of:
+
+- `builtin.out` & `lib.out` - results of the benchmark runs
+- `benchstat.txt` result of `benchstat builtin.out lib.out`
 
 ## Run benchmark
 
@@ -78,4 +83,9 @@ can be a constant value.
 
 User-defined struct literal is never a constant.
 
+## Versions
 
+* 1 : up to 1c7348b2f4683432625a7e1c9c9b434fd48b6ad7
+  initial implementation
+* 2 : from 41112b4215a2d02aca055a751f8e4047168397c5
+  [alternative Eq/Neq/IsZero implementation](https://github.com/Quasilyte/go-complex-nums-emulation/issues/2)
